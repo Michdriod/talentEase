@@ -6,7 +6,7 @@ import { services } from "@/data/services";
 import { site } from "@/data/site";
 import { Button } from "./Button";
 
-export function ContactForm() {
+export function ContactForm({ onSuccess }: { onSuccess?: () => void }) {
   const searchParams = useSearchParams();
   const preselectedService = searchParams.get("service") || undefined;
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
@@ -25,6 +25,14 @@ export function ContactForm() {
 
     formData.append("access_key", site.web3formsKey);
 
+    const name = String(formData.get("name") || "");
+    const email = String(formData.get("email") || "");
+    const service = String(formData.get("service") || "");
+
+    formData.append("subject", `New Inquiry from ${name} – ${service || "General"}`);
+    formData.append("from_name", name);
+    formData.append("replyto", email);
+
     try {
       const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
@@ -33,6 +41,7 @@ export function ContactForm() {
       if (res.ok) {
         setStatus("success");
         form.reset();
+        onSuccess?.();
       } else {
         setStatus("error");
       }
@@ -44,13 +53,7 @@ export function ContactForm() {
   }
 
   if (status === "success") {
-    return (
-      <div className="rounded-2xl border border-green/20 bg-green/5 p-8 text-center">
-        <p className="text-lg font-semibold text-green">
-          Thank you! We&apos;ll be in touch shortly.
-        </p>
-      </div>
-    );
+    return null;
   }
 
   return (

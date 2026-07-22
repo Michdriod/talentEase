@@ -1,23 +1,13 @@
-import type { Metadata } from "next";
+"use client";
+
+import { useState } from "react";
 import { Suspense } from "react";
 import { ContactForm } from "@/components/ContactForm";
 import { ContactInfoCard } from "@/components/ContactInfoCard";
 
-export const metadata: Metadata = {
-  title: "Contact Us",
-  description:
-    "Get in touch with TalentEase HR Services. Call, email, or fill out our contact form, and we'll respond within one business day.",
-};
-
-function ContactFormWrapper() {
-  return (
-    <Suspense fallback={<div className="text-navy/40">Loading form...</div>}>
-      <ContactForm />
-    </Suspense>
-  );
-}
-
 export default function ContactPage() {
+  const [submitted, setSubmitted] = useState(false);
+
   return (
     <>
       <section className="py-20 md:py-28">
@@ -31,13 +21,22 @@ export default function ContactPage() {
 
       <section className="pb-20">
         <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
-          <div className="grid gap-12 md:grid-cols-2">
-            <ContactFormWrapper />
-
-            <div>
-              <ContactInfoCard />
+          {submitted ? (
+            <div className="mx-auto max-w-lg rounded-2xl border border-green/20 bg-green/5 p-12 text-center">
+              <p className="text-xl font-semibold text-green">
+                Thank you! We&apos;ll be in touch shortly.
+              </p>
             </div>
-          </div>
+          ) : (
+            <div className="grid gap-12 md:grid-cols-2">
+              <Suspense fallback={<div className="text-navy/40">Loading form...</div>}>
+                <ContactForm onSuccess={() => setSubmitted(true)} />
+              </Suspense>
+              <div>
+                <ContactInfoCard />
+              </div>
+            </div>
+          )}
         </div>
       </section>
 

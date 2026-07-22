@@ -14,4 +14,6 @@ export const clients: Client[] = [
   { name: "Waveswift Media", logo: "/clients/client_05.jpeg" },
   { name: "Myckel Couture", logo: "/clients/client_06.jpeg" },
   { name: "Creative Team Media", logo: "/clients/client_07.jpeg" },
+  { name: "ATIS Limited", logo: "/clients/atis-group.png" },
+  { name: "Presentile", logo: "/clients/presentile.png" },
 ];

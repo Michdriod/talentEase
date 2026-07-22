@@ -40,11 +40,15 @@ const problems = [
 export default function AboutPage() {
   return (
     <>
-      <section className="bg-navy py-20 md:py-28">
+      <section className="relative overflow-hidden bg-navy py-28 md:py-36">
         <div className="mx-auto max-w-7xl px-4 text-center md:px-6 lg:px-8">
           <h1 className="text-4xl font-bold text-white md:text-5xl">Who We Are</h1>
           <p className="mt-4 text-lg font-bold text-green">People. Growth. Impact.</p>
         </div>
+        <div
+          className="pointer-events-none absolute -bottom-px right-0 h-24 w-72 bg-white"
+          style={{ clipPath: "polygon(100% 0, 100% 100%, 0 100%)" }}
+        />
       </section>
 
       <section className="relative overflow-hidden bg-white py-24 md:py-32">
@@ -188,7 +192,7 @@ export default function AboutPage() {
       <section className="py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
           <SectionHeading title="Meet the Team" />
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
             {team.map((member) => (
               <TeamCard key={member.name} member={member} />
             ))}

@@ -4,7 +4,7 @@ export const site = {
   phone: "+234 810 041 9997",
   whatsapp: "+2348100419997",
   email: "talenteasehr@gmail.com",
-  address: "Oyadiran Estate, Sabo – Yaba, Lagos",
+  address: "49 Karimu Ikotun Street, Sabo-Yaba, Lagos",
   hours: "Monday – Friday: 8:00am – 5:00pm",
   linkedin: "https://www.linkedin.com/company/talentease-hr-services/",
   instagram: "https://www.instagram.com/talenteasehr",

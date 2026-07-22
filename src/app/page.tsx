@@ -7,7 +7,6 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { ProcessSteps } from "@/components/ProcessSteps";
 import { StatCard } from "@/components/StatCard";
 import { CTABanner } from "@/components/CTABanner";
-import { LogoGrid } from "@/components/LogoGrid";
 import { services } from "@/data/services";
 import { testimonials } from "@/data/testimonials";
 
@@ -39,10 +38,10 @@ export default function HomePage() {
                 Build Stronger Teams<br />
                 <span className="whitespace-nowrap">Grow With Confidence</span>
               </h1>
-              <p className="mt-6 text-lg leading-relaxed text-navy/60 md:text-xl">
-                 TalentEase HR gives startups and growing businesses access to professional,
-                affordable HR support, from recruitment to compliance, without the cost of an
-                in-house HR department.
+               <p className="mt-6 text-lg leading-relaxed text-navy/60 md:text-xl">
+                  TalentEase HR gives startups and growing businesses access to professional,
+                affordable HR support, from recruitment and management to compliance, without
+                the cost of an in-house HR department.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <Button href="/contact">Book a Free Consultation</Button>
@@ -74,14 +73,6 @@ export default function HomePage() {
         />
       </section>
 
-      <section className="bg-light py-16">
-        <div className="mx-auto max-w-7xl px-4 text-center md:px-6 lg:px-8">
-          <p className="mb-8 text-sm font-semibold uppercase tracking-wider text-navy/50">
-            Trusted by organizations across sectors
-          </p>
-          <LogoGrid />
-        </div>
-      </section>
 
       <section className="py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
@@ -108,7 +99,7 @@ export default function HomePage() {
       <section className="bg-navy py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
           <SectionHeading
-            title="Why HR Can't Be an Afterthought"
+            title="Why HR can't be an afterthought"
             light
           />
           <div className="mx-auto max-w-3xl space-y-4 text-center">

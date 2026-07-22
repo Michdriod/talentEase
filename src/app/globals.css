@@ -6,8 +6,8 @@
   --color-green: #0E7A4A;
   --color-green-dark: #0A5C39;
   --color-light: #F6F9F7;
-  --font-heading: var(--font-sora);
-  --font-body: var(--font-inter);
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
 }
 
 body {

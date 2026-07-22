@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
-import { Sora, Inter } from "next/font/google";
+import { Poppins, Manrope } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
-const sora = Sora({
-  variable: "--font-sora",
+const poppins = Poppins({
+  variable: "--font-heading",
   subsets: ["latin"],
+  weight: ["600", "700", "800"],
 });
 
-const inter = Inter({
-  variable: "--font-inter",
+const manrope = Manrope({
+  variable: "--font-body",
   subsets: ["latin"],
 });
 
@@ -38,7 +39,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${sora.variable} ${inter.variable} h-full antialiased`}>
+    <html lang="en" className={`${poppins.variable} ${manrope.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col font-body">
         <Header />
         <main className="flex-1">{children}</main>

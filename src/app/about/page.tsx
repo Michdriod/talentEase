@@ -65,7 +65,7 @@ export default function AboutPage() {
               </h2>
               <div className="mt-6 h-1 w-20 rounded-full bg-gradient-to-r from-green to-green-dark" />
             </div>
-            <div className="space-y-5 text-base leading-relaxed text-navy/70 lg:col-span-3">
+            <div className="space-y-5 text-sm leading-relaxed text-navy/70 md:text-lg lg:col-span-3">
               <p className="border-l-4 border-green pl-5 text-lg font-medium leading-relaxed text-navy md:text-xl">
                 TalentEase HR Services was born from a simple belief: every business, regardless
                 of its size, deserves access to exceptional HR support.
@@ -104,7 +104,7 @@ export default function AboutPage() {
               </h2>
               <div className="mt-6 h-1 w-20 rounded-full bg-gradient-to-r from-green to-green-dark" />
             </div>
-            <div className="space-y-5 text-base leading-relaxed text-navy/70 lg:col-span-3">
+            <div className="space-y-5 text-sm leading-relaxed text-navy/70 md:text-lg lg:col-span-3">
               <p className="border-l-4 border-green pl-5 text-lg font-medium leading-relaxed text-navy md:text-xl">
                 We help startups and growing businesses build effective people structures
                 and employee engagement systems that support business growth and operational

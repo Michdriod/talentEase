@@ -17,7 +17,7 @@ function TeamCardWrapper({ member, delay }: { member: TeamMember; delay: number 
       style={{
         opacity: isInView ? 1 : 0,
         transform: isInView ? "translateY(0)" : "translateY(20px)",
-        transition: `opacity 0.4s ease-out ${delay}s, transform 0.4s ease-out ${delay}s`,
+        transition: `opacity 0.6s ease-out ${delay}s, transform 0.6s ease-out ${delay}s`,
       }}
     >
       <TeamCard member={member} />
@@ -29,7 +29,7 @@ export function TeamGrid({ members }: TeamGridProps) {
   return (
     <>
       {members.map((member, i) => (
-        <TeamCardWrapper key={member.name} member={member} delay={i * 0.08} />
+        <TeamCardWrapper key={member.name} member={member} delay={i * 0.12} />
       ))}
     </>
   );

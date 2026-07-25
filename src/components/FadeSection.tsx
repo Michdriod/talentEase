@@ -18,7 +18,7 @@ export function FadeSection({ children, className }: FadeSectionProps) {
       style={{
         opacity: isInView ? 1 : 0,
         transform: isInView ? "translateY(0)" : "translateY(30px)",
-        transition: "opacity 0.6s ease-out, transform 0.6s ease-out",
+        transition: "opacity 0.8s ease-out, transform 0.8s ease-out",
       }}
     >
       {children}

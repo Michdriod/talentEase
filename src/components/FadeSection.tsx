@@ -1,7 +1,7 @@
 "use client";
 
 import { type ReactNode } from "react";
-import { motion } from "framer-motion";
+import { useInView } from "@/hooks/useInView";
 
 interface FadeSectionProps {
   children: ReactNode;
@@ -9,15 +9,19 @@ interface FadeSectionProps {
 }
 
 export function FadeSection({ children, className }: FadeSectionProps) {
+  const { ref, isInView } = useInView({ margin: "-80px", once: true });
+
   return (
-    <motion.section
+    <section
+      ref={ref}
       className={className}
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: false, margin: "-80px" }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+      style={{
+        opacity: isInView ? 1 : 0,
+        transform: isInView ? "translateY(0)" : "translateY(30px)",
+        transition: "opacity 0.6s ease-out, transform 0.6s ease-out",
+      }}
     >
       {children}
-    </motion.section>
+    </section>
   );
 }

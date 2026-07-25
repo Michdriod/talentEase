@@ -4,7 +4,7 @@ import { clients } from "@/data/clients";
 export function LogoGrid() {
   return (
     <div className="mx-auto max-w-5xl">
-      <div className="flex flex-wrap items-center justify-center gap-8 opacity-60 grayscale transition-all hover:opacity-100 hover:grayscale-0">
+      <div className="flex flex-wrap items-center justify-center gap-8">
         {clients.map((client) => (
           <div
             key={client.name}

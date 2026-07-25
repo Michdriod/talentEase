@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Button } from "@/components/Button";
 import { JobCard } from "@/components/JobCard";
+import { FadeSection } from "@/components/FadeSection";
 import { CTABanner } from "@/components/CTABanner";
 import { jobs } from "@/data/jobs";
 import { site } from "@/data/site";
@@ -14,17 +15,17 @@ export const metadata: Metadata = {
 export default function CareersPage() {
   return (
     <>
-      <section className="py-20 md:py-28">
+      <FadeSection className="py-16 md:py-20 lg:py-28">
         <div className="mx-auto max-w-3xl px-4 text-center md:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold text-navy md:text-5xl">Careers</h1>
-          <p className="mt-6 text-lg leading-relaxed text-navy/60">
+          <h1 className="text-3xl font-bold text-navy md:text-4xl lg:text-5xl">Careers</h1>
+          <p className="mt-6 text-sm leading-relaxed text-navy/60 sm:text-base md:text-lg">
             We connect talented professionals with growing businesses. Browse current openings
             below, or join our talent network to be considered for future roles.
           </p>
         </div>
-      </section>
+      </FadeSection>
 
-      <section className="pb-20">
+      <FadeSection className="pb-20">
         <div className="mx-auto max-w-3xl px-4 md:px-6 lg:px-8">
           {jobs.length > 0 ? (
             <div className="space-y-6">
@@ -33,7 +34,7 @@ export default function CareersPage() {
               ))}
             </div>
           ) : (
-            <div className="rounded-2xl border border-navy/10 bg-white p-8 text-center shadow-sm">
+            <div className="rounded-2xl border border-navy/10 bg-white p-6 text-center shadow-sm sm:p-8">
               <p className="text-navy/60">
                 There are no open roles right now, but we&apos;re always happy to meet great talent.
                 Send your CV to{" "}
@@ -45,7 +46,7 @@ export default function CareersPage() {
             </div>
           )}
 
-          <div className="mt-10 rounded-2xl border border-green/20 bg-green/5 p-8 text-center">
+          <div className="mt-10 rounded-2xl border border-green/20 bg-green/5 p-6 text-center sm:p-8">
             <h2 className="text-xl font-bold text-navy">Apply / Join Our Talent Network</h2>
             <p className="mt-3 text-sm text-navy/60">
               You&apos;ll be redirected to a short Google Form where you can apply for roles and
@@ -58,7 +59,7 @@ export default function CareersPage() {
             </div>
           </div>
         </div>
-      </section>
+      </FadeSection>
 
       <CTABanner
         title="Ready to build a stronger team?"

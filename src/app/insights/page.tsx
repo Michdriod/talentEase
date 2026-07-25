@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { SectionHeading } from "@/components/SectionHeading";
 import { VideoEmbed } from "@/components/VideoEmbed";
 import { CTABanner } from "@/components/CTABanner";
+import { FadeSection } from "@/components/FadeSection";
 import { videos } from "@/data/videos";
 
 export const metadata: Metadata = {
@@ -19,17 +20,17 @@ const articles = [
 export default function InsightsPage() {
   return (
     <>
-      <section className="py-20 md:py-28">
+      <FadeSection className="py-16 md:py-20 lg:py-28">
         <div className="mx-auto max-w-3xl px-4 text-center md:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold text-navy md:text-5xl">Insights & Resources</h1>
-          <p className="mt-6 text-lg leading-relaxed text-navy/60">
+          <h1 className="text-3xl font-bold text-navy md:text-4xl lg:text-5xl">Insights & Resources</h1>
+          <p className="mt-6 text-sm leading-relaxed text-navy/60 sm:text-base md:text-lg">
             Practical HR knowledge for growing businesses, from employee retention to building
             strong workplace cultures.
           </p>
         </div>
-      </section>
+      </FadeSection>
 
-      <section className="pb-20">
+      <FadeSection className="pb-20">
         <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
           <SectionHeading title="Videos" />
           {videos.length > 0 ? (
@@ -42,9 +43,9 @@ export default function InsightsPage() {
             <p className="text-center text-navy/40">Videos coming soon.</p>
           )}
         </div>
-      </section>
+      </FadeSection>
 
-      <section className="bg-light py-20">
+      <FadeSection className="bg-light py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
           <SectionHeading title="Articles" />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -59,7 +60,7 @@ export default function InsightsPage() {
             ))}
           </div>
         </div>
-      </section>
+      </FadeSection>
 
       <CTABanner
         title="Ready to build a stronger team?"

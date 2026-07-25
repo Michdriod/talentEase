@@ -3,6 +3,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { ServiceDetail } from "@/components/ServiceDetail";
 import { ProcessSteps } from "@/components/ProcessSteps";
 import { CTABanner } from "@/components/CTABanner";
+import { FadeSection } from "@/components/FadeSection";
 import { Button } from "@/components/Button";
 import { services } from "@/data/services";
 
@@ -18,25 +19,25 @@ export default function ServicesPage() {
 
   return (
     <>
-      <section className="bg-navy py-20 md:py-28">
+      <FadeSection className="bg-navy py-16 md:py-20 lg:py-28">
         <div className="mx-auto max-w-3xl px-4 text-center md:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold text-white md:text-5xl">Our Premium Services</h1>
-          <p className="mt-6 text-lg leading-relaxed text-white/70">
+          <h1 className="text-3xl font-bold text-white md:text-4xl lg:text-5xl">Our Premium Services</h1>
+          <p className="mt-6 text-sm leading-relaxed text-white/70 sm:text-base md:text-lg">
             From finding the right talent to supporting employees throughout their journey, our
             services are designed to help your business build a thriving team, while you focus
             on growing with confidence.
           </p>
         </div>
-      </section>
+      </FadeSection>
 
       {flagship && (
-        <section className="-mt-16 px-4 md:px-6 lg:px-8">
-          <div className="mx-auto max-w-5xl rounded-2xl bg-navy-dark p-8 md:p-12">
+        <FadeSection className="-mt-16 px-4 md:px-6 lg:px-8">
+          <div className="mx-auto max-w-5xl rounded-2xl bg-navy-dark p-6 md:p-8 lg:p-12">
             <span className="inline-block rounded-full bg-green/20 px-4 py-1.5 text-sm font-semibold text-green">
               Our Flagship Service
             </span>
-            <h2 className="mt-4 text-2xl font-bold text-white md:text-3xl">{flagship.title}</h2>
-            <p className="mt-4 text-base leading-relaxed text-white/70">{flagship.full}</p>
+            <h2 className="mt-4 text-xl font-bold text-white md:text-2xl lg:text-3xl">{flagship.title}</h2>
+            <p className="mt-4 text-sm leading-relaxed text-white/70 md:text-base">{flagship.full}</p>
             <div className="mt-6">
               <Button
                 href={`/contact?service=${encodeURIComponent(flagship.title)}`}
@@ -46,23 +47,23 @@ export default function ServicesPage() {
               </Button>
             </div>
           </div>
-        </section>
+        </FadeSection>
       )}
 
-      <section className="py-20 md:py-28">
-        <div className="mx-auto max-w-5xl space-y-8 px-4 md:px-6 lg:px-8">
+      <FadeSection className="py-16 md:py-20 lg:py-28">
+        <div className="mx-auto max-w-5xl space-y-6 md:space-y-8 px-4 md:px-6 lg:px-8">
           {others.map((service) => (
             <ServiceDetail key={service.id} service={service} />
           ))}
         </div>
-      </section>
+      </FadeSection>
 
-      <section className="bg-light py-20 md:py-28">
+      <FadeSection className="bg-light py-16 md:py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
           <SectionHeading title="How We Work" />
           <ProcessSteps />
         </div>
-      </section>
+      </FadeSection>
 
       <CTABanner
         title="Ready to build a stronger team?"

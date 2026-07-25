@@ -4,31 +4,32 @@ import { useState } from "react";
 import { Suspense } from "react";
 import { ContactForm } from "@/components/ContactForm";
 import { ContactInfoCard } from "@/components/ContactInfoCard";
+import { FadeSection } from "@/components/FadeSection";
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
 
   return (
     <>
-      <section className="py-20 md:py-28">
+      <FadeSection className="py-16 md:py-20 lg:py-28">
         <div className="mx-auto max-w-3xl px-4 text-center md:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold text-navy md:text-5xl">Contact Us</h1>
-          <p className="mt-6 text-lg leading-relaxed text-navy/60">
+          <h1 className="text-3xl font-bold text-navy md:text-4xl lg:text-5xl">Contact Us</h1>
+          <p className="mt-6 text-sm leading-relaxed text-navy/60 sm:text-base md:text-lg">
             Tell us about your HR needs, and we&apos;ll get back to you within one business day.
           </p>
         </div>
-      </section>
+      </FadeSection>
 
-      <section className="pb-20">
+      <FadeSection className="pb-20">
         <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
           {submitted ? (
-            <div className="mx-auto max-w-lg rounded-2xl border border-green/20 bg-green/5 p-12 text-center">
-              <p className="text-xl font-semibold text-green">
+            <div className="mx-auto max-w-lg rounded-2xl border border-green/20 bg-green/5 p-8 text-center md:p-12">
+              <p className="text-lg font-semibold text-green md:text-xl">
                 Thank you! We&apos;ll be in touch shortly.
               </p>
             </div>
           ) : (
-            <div className="grid gap-12 md:grid-cols-2">
+            <div className="grid gap-8 md:gap-12 md:grid-cols-2">
               <Suspense fallback={<div className="text-navy/40">Loading form...</div>}>
                 <ContactForm onSuccess={() => setSubmitted(true)} />
               </Suspense>
@@ -38,9 +39,9 @@ export default function ContactPage() {
             </div>
           )}
         </div>
-      </section>
+      </FadeSection>
 
-      <section className="pb-20">
+      <FadeSection className="pb-20">
         <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
           <div className="aspect-video overflow-hidden rounded-2xl">
             <iframe
@@ -53,7 +54,7 @@ export default function ContactPage() {
             />
           </div>
         </div>
-      </section>
+      </FadeSection>
     </>
   );
 }

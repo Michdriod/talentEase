@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Target, Rocket, Building2, UserX, Search, Building } from "lucide-react";
 import { SectionHeading } from "@/components/SectionHeading";
-import { TeamCard } from "@/components/TeamCard";
+import { TeamGrid } from "@/components/TeamGrid";
 import { CTABanner } from "@/components/CTABanner";
+import { FadeSection } from "@/components/FadeSection";
 import { LogoGrid } from "@/components/LogoGrid";
 import { portfolioIntro } from "@/data/clients";
 import { team } from "@/data/team";
@@ -40,32 +41,32 @@ const problems = [
 export default function AboutPage() {
   return (
     <>
-      <section className="relative overflow-hidden bg-navy py-28 md:py-36">
+      <FadeSection className="relative overflow-hidden bg-navy py-20 md:py-28 lg:py-36">
         <div className="mx-auto max-w-7xl px-4 text-center md:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold text-white md:text-5xl">Who We Are</h1>
-          <p className="mt-4 text-lg font-bold text-green">People. Growth. Impact.</p>
+          <h1 className="text-3xl font-bold text-white md:text-4xl lg:text-5xl">Who We Are</h1>
+          <p className="mt-4 text-base font-bold text-green md:text-lg">People. Growth. Impact.</p>
         </div>
         <div
           className="pointer-events-none absolute -bottom-px right-0 h-24 w-72 bg-white"
           style={{ clipPath: "polygon(100% 0, 100% 100%, 0 100%)" }}
         />
-      </section>
+      </FadeSection>
 
-      <section className="relative overflow-hidden bg-white py-24 md:py-32">
+      <FadeSection className="relative overflow-hidden bg-white py-16 md:py-24 lg:py-32">
         <div className="pointer-events-none absolute -left-20 top-1/3 h-40 w-40 -translate-y-1/2 rounded-[2rem] bg-gradient-to-br from-green/[0.03] to-transparent" />
 
         <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
           <div className="grid items-start gap-10 lg:grid-cols-5 lg:gap-16">
             <div className="lg:col-span-2">
-              <h2 className="text-3xl font-bold leading-tight text-navy md:text-4xl">
+              <h2 className="text-2xl font-bold leading-tight text-navy md:text-3xl lg:text-4xl">
                 Our
                 <br />
                 <span className="text-green">Story</span>
               </h2>
               <div className="mt-6 h-1 w-20 rounded-full bg-gradient-to-r from-green to-green-dark" />
             </div>
-            <div className="space-y-5 text-lg leading-relaxed text-navy/70 lg:col-span-3">
-              <p className="border-l-4 border-green pl-5 text-xl font-medium leading-relaxed text-navy">
+            <div className="space-y-5 text-base leading-relaxed text-navy/70 lg:col-span-3">
+              <p className="border-l-4 border-green pl-5 text-lg font-medium leading-relaxed text-navy md:text-xl">
                 TalentEase HR Services was born from a simple belief: every business, regardless
                 of its size, deserves access to exceptional HR support.
               </p>
@@ -86,9 +87,9 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-      </section>
+      </FadeSection>
 
-      <section className="relative overflow-hidden bg-light py-24 md:py-32">
+      <FadeSection className="relative overflow-hidden bg-light py-16 md:py-24 lg:py-32">
         <div className="pointer-events-none absolute -bottom-16 -right-16 h-72 w-72 rounded-[3rem] border border-green/10" />
         <div className="pointer-events-none absolute -bottom-8 -right-8 h-56 w-56 rounded-[2rem] border border-navy/5" />
         <div className="pointer-events-none absolute -left-20 top-1/3 h-40 w-40 -translate-y-1/2 rounded-[2rem] bg-gradient-to-br from-green/[0.03] to-transparent" />
@@ -96,15 +97,15 @@ export default function AboutPage() {
         <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
           <div className="grid items-start gap-10 lg:grid-cols-5 lg:gap-16">
             <div className="lg:col-span-2">
-              <h2 className="text-3xl font-bold leading-tight text-navy md:text-4xl">
+              <h2 className="text-2xl font-bold leading-tight text-navy md:text-3xl lg:text-4xl">
                 What We
                 <br />
                 <span className="text-green">Do</span>
               </h2>
               <div className="mt-6 h-1 w-20 rounded-full bg-gradient-to-r from-green to-green-dark" />
             </div>
-            <div className="space-y-5 text-lg leading-relaxed text-navy/70 lg:col-span-3">
-              <p className="border-l-4 border-green pl-5 text-xl font-medium leading-relaxed text-navy">
+            <div className="space-y-5 text-base leading-relaxed text-navy/70 lg:col-span-3">
+              <p className="border-l-4 border-green pl-5 text-lg font-medium leading-relaxed text-navy md:text-xl">
                 We help startups and growing businesses build effective people structures
                 and employee engagement systems that support business growth and operational
                 efficiency.
@@ -121,9 +122,9 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-      </section>
+      </FadeSection>
 
-      <section className="py-20 md:py-28">
+      <FadeSection className="py-16 md:py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
           <SectionHeading title="Who We Serve" />
           <div className="grid gap-6 md:grid-cols-3">
@@ -141,25 +142,25 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </FadeSection>
 
-      <section className="bg-light py-20 md:py-28">
+      <FadeSection className="bg-light py-16 md:py-20 lg:py-28">
         <div className="mx-auto max-w-2xl px-4 md:px-6 lg:px-8">
-          <div className="relative rounded-2xl bg-white p-10 text-center shadow-sm ring-1 ring-navy/5">
+          <div className="relative rounded-2xl bg-white p-6 text-center shadow-sm ring-1 ring-navy/5 sm:p-10">
             <div className="absolute left-1/2 top-0 h-1.5 w-24 -translate-x-1/2 rounded-full bg-gradient-to-r from-green to-green-dark" />
             <div className="mx-auto mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-green/10 text-green">
               <Target size={24} />
             </div>
-            <h3 className="mb-4 text-2xl font-bold text-navy">Our Mission</h3>
-            <p className="text-lg leading-relaxed text-navy/70">
+            <h3 className="mb-4 text-xl font-bold text-navy md:text-2xl">Our Mission</h3>
+            <p className="text-base leading-relaxed text-navy/70 md:text-lg">
               To empower businesses with accessible, affordable, and people-centered HR solutions
               that help them build stronger teams and achieve lasting growth.
             </p>
           </div>
         </div>
-      </section>
+      </FadeSection>
 
-      <section className="py-20 md:py-28">
+      <FadeSection className="py-16 md:py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
           <SectionHeading title="Problems We Solve" />
           <div className="grid gap-6 md:grid-cols-3">
@@ -177,28 +178,26 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </FadeSection>
 
-      <section className="bg-light py-20 md:py-28">
+      <FadeSection className="bg-light py-16 md:py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 text-center md:px-6 lg:px-8">
           <SectionHeading title="Our Portfolio" />
-          <p className="mx-auto mb-12 max-w-2xl text-lg leading-relaxed text-navy/60">
+          <p className="mx-auto mb-12 max-w-2xl text-base leading-relaxed text-navy/60 md:text-lg">
             {portfolioIntro}
           </p>
           <LogoGrid />
         </div>
-      </section>
+      </FadeSection>
 
-      <section className="py-20 md:py-28">
+      <FadeSection className="py-16 md:py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
           <SectionHeading title="Meet the Team" />
           <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
-            {team.map((member) => (
-              <TeamCard key={member.name} member={member} />
-            ))}
+            <TeamGrid members={team} />
           </div>
         </div>
-      </section>
+      </FadeSection>
 
       <CTABanner
         title="Ready to build a stronger team?"

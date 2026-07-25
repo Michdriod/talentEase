@@ -40,7 +40,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${poppins.variable} ${manrope.variable} h-full antialiased`}>
-      <body className="flex min-h-full flex-col font-body">
+      <body className="flex min-h-full flex-col font-body" suppressHydrationWarning>
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

@@ -8,14 +8,6 @@ export interface Service {
 
 export const services: Service[] = [
   {
-    id: "outsourced-hr-management",
-    title: "Outsourced HR Management",
-    short: "End-to-end HR support at an affordable cost.",
-    full:
-      "We provide end-to-end HR support, from recruitment and onboarding to employee management, HR policies, performance management, and compliance, giving businesses access to expert HR services at an affordable cost.",
-    flagship: true,
-  },
-  {
     id: "recruitment-talent-acquisition",
     title: "Recruitment & Talent Acquisition",
     short: "Find and hire the right people for every role.",
@@ -35,6 +27,7 @@ export const services: Service[] = [
     short: "Senior-level HR expertise on retainer.",
     full:
       "Our fractional HR Services give businesses access to senior-level HR expertise without the financial commitment of employing a full time HR manager. We support organizations in attracting and retaining top talent, developing HR policies and procedures, ensuring compliance with employment regulations, managing employee relations, implementing performance management system and providing strategic HR advisory services.",
+    flagship: true,
   },
   {
     id: "learning-development",

@@ -8,7 +8,7 @@ interface TeamCardProps {
 export function TeamCard({ member }: TeamCardProps) {
   const content = (
     <>
-      <div className="flex aspect-[3/4] w-full items-start justify-center overflow-hidden rounded-t-2xl bg-light">
+      <div className="flex aspect-[3/4] w-full items-start justify-center overflow-hidden rounded-t-2xl bg-light max-md:max-h-64">
         {member.photo ? (
           <img src={member.photo} alt={member.name} className="h-full w-full object-cover object-top" />
         ) : (

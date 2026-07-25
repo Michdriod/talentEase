@@ -20,7 +20,7 @@ export function Button({
   external,
 }: ButtonProps) {
   const base =
-    "inline-flex items-center justify-center rounded-lg px-6 py-3 font-semibold text-sm transition-colors";
+    "inline-flex items-center justify-center rounded-lg px-6 py-3.5 font-semibold text-sm transition-colors md:py-3";
   const styles = {
     primary:
       "bg-green text-white hover:bg-green-dark focus-visible:outline-2 focus-visible:outline-green",

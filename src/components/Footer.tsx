@@ -72,12 +72,12 @@ export function Footer() {
             </h3>
             <ul className="space-y-3 text-sm text-white/60">
               <li>
-                <a href={`tel:${site.phone}`} className="hover:text-green">
+                <a href={`tel:${site.phone}`} className="inline-block py-1 hover:text-green">
                   {site.phone}
                 </a>
               </li>
               <li>
-                <a href={`mailto:${site.email}`} className="hover:text-green">
+                <a href={`mailto:${site.email}`} className="inline-block py-1 hover:text-green">
                   {site.email}
                 </a>
               </li>
@@ -88,7 +88,7 @@ export function Footer() {
                   href={site.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-green"
+                  className="inline-block py-1 hover:text-green"
                   aria-label="LinkedIn"
                 >
                   LinkedIn
@@ -97,7 +97,7 @@ export function Footer() {
                   href={site.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-green"
+                  className="inline-block py-1 hover:text-green"
                   aria-label="Instagram"
                 >
                   Instagram

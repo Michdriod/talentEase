@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { BadgeDollarSign, HeartHandshake, UserPlus, TrendingUp } from "lucide-react";
@@ -7,6 +9,7 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { ProcessSteps } from "@/components/ProcessSteps";
 import { StatCard } from "@/components/StatCard";
 import { CTABanner } from "@/components/CTABanner";
+import { FadeSection } from "@/components/FadeSection";
 import { services } from "@/data/services";
 import { testimonials } from "@/data/testimonials";
 
@@ -27,25 +30,25 @@ const differences = [
 export default function HomePage() {
   return (
     <>
-      <section className="relative overflow-hidden bg-white py-24 md:py-32">
+      <FadeSection className="relative overflow-hidden bg-white py-16 md:py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
-          <div className="flex items-center gap-12">
-            <div className="max-w-2xl shrink-0">
+          <div className="flex flex-col items-start gap-12 lg:flex-row lg:items-center">
+            <div className="min-w-0 max-w-2xl lg:shrink-0">
               <span className="inline-block rounded-full bg-green/10 px-4 py-1.5 text-sm font-semibold text-green">
                 People. Growth. Impact.
               </span>
-              <h1 className="mt-6 text-4xl font-bold leading-tight text-navy md:text-5xl lg:text-6xl">
+              <h1 className="mt-6 text-2xl font-bold leading-tight text-navy sm:text-3xl md:text-5xl lg:text-6xl">
                 Build Stronger Teams<br />
-                <span className="whitespace-nowrap">Grow With Confidence</span>
+                Grow With Confidence
               </h1>
-               <p className="mt-6 text-lg leading-relaxed text-navy/60 md:text-xl">
+                <p className="mt-6 text-sm leading-relaxed text-navy/60 sm:text-base md:text-lg lg:text-xl">
                   TalentEase HR gives startups and growing businesses access to professional,
                 affordable HR support, from recruitment and management to compliance, without
                 the cost of an in-house HR department.
               </p>
-              <div className="mt-8 flex flex-wrap gap-4">
-                <Button href="/contact">Book a Free Consultation</Button>
-                <Button href="/services" variant="secondary">
+              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+                <Button href="/contact" className="w-full sm:w-auto">Book a Free Consultation</Button>
+                <Button href="/services" variant="secondary" className="w-full sm:w-auto">
                   Explore Our Services
                 </Button>
               </div>
@@ -71,14 +74,13 @@ export default function HomePage() {
           className="absolute -left-16 bottom-0 h-64 w-64 bg-green opacity-5"
           style={{ clipPath: "polygon(0% 40%, 100% 0%, 100% 100%, 0% 60%)" }}
         />
-      </section>
+      </FadeSection>
 
-
-      <section className="py-20 md:py-28">
+      <FadeSection className="py-16 md:py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <SectionHeading title="Who We Are" />
-            <p className="text-lg leading-relaxed text-navy/70">
+            <p className="text-sm leading-relaxed text-navy/70 sm:text-base md:text-lg">
               We are a people-focused HR consulting firm committed to helping businesses build
               stronger, more efficient, and sustainable workplaces. Our team operates as an
               extension of your leadership because we believe that every organisation thrives
@@ -94,20 +96,20 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </FadeSection>
 
-      <section className="bg-navy py-20 md:py-28">
+      <FadeSection className="bg-navy py-16 md:py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
           <SectionHeading
             title="Why HR can't be an afterthought"
             light
           />
           <div className="mx-auto max-w-3xl space-y-4 text-center">
-            <p className="text-white/70">
+            <p className="text-sm text-white/70 sm:text-base md:text-lg">
               Research consistently identifies poor management, weak leadership, and lack of
               operational structure as major contributors to small business failure.
             </p>
-            <p className="text-white/70">
+            <p className="text-sm text-white/70 sm:text-base md:text-lg">
               And this is true because startups struggle with unclear HR processes, talent gaps,
               weak organizational structure, and low employee engagement, which can and will
               impact productivity and scalability.
@@ -119,33 +121,35 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </FadeSection>
 
-      <section className="py-20 md:py-28">
+      <FadeSection className="py-16 md:py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
           <SectionHeading
             title="Our Premium Services"
             subtitle="Our approach is simple: delivering tailored HR solutions that prioritise your business, discover talents, foster people growth, create lasting impact."
           />
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mx-auto flex max-w-6xl flex-wrap justify-center gap-6">
             {services.map((service) => (
-              <ServiceCard key={service.id} service={service} />
+              <div key={service.id} className="w-full sm:w-[48%] lg:w-[31%]">
+              <ServiceCard service={service} className="h-full" />
+              </div>
             ))}
           </div>
         </div>
-      </section>
+      </FadeSection>
 
-      <section className="bg-light py-20 md:py-28">
+      <FadeSection className="bg-light py-16 md:py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
           <SectionHeading title="How We Work With You" />
           <ProcessSteps />
         </div>
-      </section>
+      </FadeSection>
 
-      <section className="py-20 md:py-28">
+      <FadeSection className="py-16 md:py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
           <SectionHeading title="The TalentEase Difference" />
-          <p className="mx-auto mb-12 max-w-3xl text-center text-lg leading-relaxed text-navy/60">
+          <p className="mx-auto mb-12 max-w-3xl text-center text-sm leading-relaxed text-navy/60 sm:text-base md:text-lg">
             Our commitment to delivering professional, affordable, and personalized HR solutions
             gives your business access to expert HR support, without the cost of an in-house HR
             department.
@@ -164,14 +168,14 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </FadeSection>
 
       {testimonials.length > 0 && (
-        <section className="bg-light py-20 md:py-28">
+      <FadeSection className="bg-light py-16 md:py-20 lg:py-28">
           <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
             <SectionHeading title="What Our Clients Say" />
           </div>
-        </section>
+        </FadeSection>
       )}
 
       <CTABanner

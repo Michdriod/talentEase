@@ -71,7 +71,7 @@ export function ContactForm({ onSuccess }: { onSuccess?: () => void }) {
             id="name"
             name="name"
             required
-            className="w-full rounded-lg border border-navy/20 px-4 py-2.5 text-sm text-navy outline-none focus:border-green focus:ring-1 focus:ring-green"
+            className="w-full rounded-lg border border-navy/20 px-4 py-3 text-sm text-navy outline-none focus:border-green focus:ring-1 focus:ring-green"
           />
         </div>
         <div>
@@ -83,7 +83,7 @@ export function ContactForm({ onSuccess }: { onSuccess?: () => void }) {
             name="email"
             type="email"
             required
-            className="w-full rounded-lg border border-navy/20 px-4 py-2.5 text-sm text-navy outline-none focus:border-green focus:ring-1 focus:ring-green"
+            className="w-full rounded-lg border border-navy/20 px-4 py-3 text-sm text-navy outline-none focus:border-green focus:ring-1 focus:ring-green"
           />
         </div>
       </div>
@@ -97,7 +97,7 @@ export function ContactForm({ onSuccess }: { onSuccess?: () => void }) {
             id="phone"
             name="phone"
             type="tel"
-            className="w-full rounded-lg border border-navy/20 px-4 py-2.5 text-sm text-navy outline-none focus:border-green focus:ring-1 focus:ring-green"
+            className="w-full rounded-lg border border-navy/20 px-4 py-3 text-sm text-navy outline-none focus:border-green focus:ring-1 focus:ring-green"
           />
         </div>
         <div>
@@ -107,7 +107,7 @@ export function ContactForm({ onSuccess }: { onSuccess?: () => void }) {
           <input
             id="company"
             name="company"
-            className="w-full rounded-lg border border-navy/20 px-4 py-2.5 text-sm text-navy outline-none focus:border-green focus:ring-1 focus:ring-green"
+            className="w-full rounded-lg border border-navy/20 px-4 py-3 text-sm text-navy outline-none focus:border-green focus:ring-1 focus:ring-green"
           />
         </div>
       </div>
@@ -120,7 +120,7 @@ export function ContactForm({ onSuccess }: { onSuccess?: () => void }) {
           id="service"
           name="service"
           defaultValue={preselectedService || ""}
-          className="w-full rounded-lg border border-navy/20 px-4 py-2.5 text-sm text-navy outline-none focus:border-green focus:ring-1 focus:ring-green"
+          className="w-full rounded-lg border border-navy/20 px-4 py-3 text-sm text-navy outline-none focus:border-green focus:ring-1 focus:ring-green"
         >
           <option value="">Select a service</option>
           {services.map((s) => (
@@ -141,7 +141,7 @@ export function ContactForm({ onSuccess }: { onSuccess?: () => void }) {
           name="message"
           required
           rows={5}
-          className="w-full rounded-lg border border-navy/20 px-4 py-2.5 text-sm text-navy outline-none focus:border-green focus:ring-1 focus:ring-green"
+          className="w-full rounded-lg border border-navy/20 px-4 py-3 text-sm text-navy outline-none focus:border-green focus:ring-1 focus:ring-green"
         />
       </div>
 

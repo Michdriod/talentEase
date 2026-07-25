@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { SectionHeading } from "@/components/SectionHeading";
-import { ServiceDetail } from "@/components/ServiceDetail";
-import { ProcessSteps } from "@/components/ProcessSteps";
-import { CTABanner } from "@/components/CTABanner";
+import { ServiceDetailGrid } from "@/components/ServiceDetailGrid";
+import { ProcessStepsGrid } from "@/components/ProcessStepsGrid";
+import { CTABannerAnimated } from "@/components/CTABannerAnimated";
 import { FadeSection } from "@/components/FadeSection";
 import { Button } from "@/components/Button";
 import { services } from "@/data/services";
@@ -52,20 +52,18 @@ export default function ServicesPage() {
 
       <FadeSection className="py-16 md:py-20 lg:py-28">
         <div className="mx-auto max-w-5xl space-y-6 md:space-y-8 px-4 md:px-6 lg:px-8">
-          {others.map((service) => (
-            <ServiceDetail key={service.id} service={service} />
-          ))}
-        </div>
+            <ServiceDetailGrid services={others} />
+          </div>
       </FadeSection>
 
       <FadeSection className="bg-light py-16 md:py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
           <SectionHeading title="How We Work" />
-          <ProcessSteps />
+          <ProcessStepsGrid />
         </div>
       </FadeSection>
 
-      <CTABanner
+      <CTABannerAnimated
         title="Ready to build a stronger team?"
         subtitle="Let's fix it. Together."
         buttonLabel="Get in Touch"

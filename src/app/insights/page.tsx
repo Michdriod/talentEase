@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { SectionHeading } from "@/components/SectionHeading";
 import { VideoEmbed } from "@/components/VideoEmbed";
-import { CTABanner } from "@/components/CTABanner";
+import { CTABannerAnimated } from "@/components/CTABannerAnimated";
 import { FadeSection } from "@/components/FadeSection";
 import { videos } from "@/data/videos";
 
@@ -62,7 +62,7 @@ export default function InsightsPage() {
         </div>
       </FadeSection>
 
-      <CTABanner
+      <CTABannerAnimated
         title="Ready to build a stronger team?"
         subtitle="Let's fix it. Together."
         buttonLabel="Get in Touch"

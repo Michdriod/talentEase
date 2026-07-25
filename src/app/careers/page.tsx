@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Button } from "@/components/Button";
 import { JobCard } from "@/components/JobCard";
 import { FadeSection } from "@/components/FadeSection";
-import { CTABanner } from "@/components/CTABanner";
+import { CTABannerAnimated } from "@/components/CTABannerAnimated";
 import { jobs } from "@/data/jobs";
 import { site } from "@/data/site";
 
@@ -61,7 +61,7 @@ export default function CareersPage() {
         </div>
       </FadeSection>
 
-      <CTABanner
+      <CTABannerAnimated
         title="Ready to build a stronger team?"
         subtitle="Let's fix it. Together."
         buttonLabel="Get in Touch"

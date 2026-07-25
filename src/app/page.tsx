@@ -5,10 +5,10 @@ import Image from "next/image";
 import { BadgeDollarSign, HeartHandshake, UserPlus, TrendingUp } from "lucide-react";
 import { Button } from "@/components/Button";
 import { SectionHeading } from "@/components/SectionHeading";
-import { ServiceCard } from "@/components/ServiceCard";
-import { ProcessSteps } from "@/components/ProcessSteps";
+import { ServiceCardGrid } from "@/components/ServiceCardGrid";
+import { ProcessStepsGrid } from "@/components/ProcessStepsGrid";
 import { StatCard } from "@/components/StatCard";
-import { CTABanner } from "@/components/CTABanner";
+import { CTABannerAnimated } from "@/components/CTABannerAnimated";
 import { FadeSection } from "@/components/FadeSection";
 import { services } from "@/data/services";
 import { testimonials } from "@/data/testimonials";
@@ -107,7 +107,7 @@ export default function HomePage() {
           <div className="mx-auto max-w-3xl space-y-4 text-center">
             <p className="text-sm text-white/70 sm:text-base md:text-lg">
               Research consistently identifies poor management, weak leadership, and lack of
-              operational structure as major contributors to small business failure.
+              operational structure as major contributors to failure for small and growing businesses.
             </p>
             <p className="text-sm text-white/70 sm:text-base md:text-lg">
               And this is true because startups struggle with unclear HR processes, talent gaps,
@@ -130,11 +130,7 @@ export default function HomePage() {
             subtitle="Our approach is simple: delivering tailored HR solutions that prioritise your business, discover talents, foster people growth, create lasting impact."
           />
           <div className="mx-auto flex max-w-6xl flex-wrap justify-center gap-6">
-            {services.map((service) => (
-              <div key={service.id} className="w-full sm:w-[48%] lg:w-[31%]">
-              <ServiceCard service={service} className="h-full" />
-              </div>
-            ))}
+            <ServiceCardGrid services={services} />
           </div>
         </div>
       </FadeSection>
@@ -142,7 +138,7 @@ export default function HomePage() {
       <FadeSection className="bg-light py-16 md:py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
           <SectionHeading title="How We Work With You" />
-          <ProcessSteps />
+          <ProcessStepsGrid />
         </div>
       </FadeSection>
 
@@ -178,7 +174,7 @@ export default function HomePage() {
         </FadeSection>
       )}
 
-      <CTABanner
+      <CTABannerAnimated
         title="Ready to build a stronger team?"
         subtitle="Let's fix it. Together."
         buttonLabel="Get in Touch"

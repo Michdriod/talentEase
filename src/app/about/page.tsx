@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Target, Rocket, Building2, UserX, Search, Building } from "lucide-react";
 import { SectionHeading } from "@/components/SectionHeading";
 import { TeamGrid } from "@/components/TeamGrid";
-import { CTABanner } from "@/components/CTABanner";
+import { CTABannerAnimated } from "@/components/CTABannerAnimated";
 import { FadeSection } from "@/components/FadeSection";
 import { LogoGrid } from "@/components/LogoGrid";
 import { portfolioIntro } from "@/data/clients";
@@ -199,7 +199,7 @@ export default function AboutPage() {
         </div>
       </FadeSection>
 
-      <CTABanner
+      <CTABannerAnimated
         title="Ready to build a stronger team?"
         subtitle="Let's fix it. Together."
         buttonLabel="Get in Touch"

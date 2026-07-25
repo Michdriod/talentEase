@@ -19,7 +19,7 @@ export default function CareersPage() {
         <div className="mx-auto max-w-3xl px-4 text-center md:px-6 lg:px-8">
           <h1 className="text-3xl font-bold text-navy md:text-4xl lg:text-5xl">Careers</h1>
           <p className="mt-6 text-sm leading-relaxed text-navy/60 sm:text-base md:text-lg">
-            We connect talented professionals with growing businesses. Browse current openings
+            We connect skilled professionals with growing businesses. Browse current openings
             below, or join our talent network to be considered for future roles.
           </p>
         </div>

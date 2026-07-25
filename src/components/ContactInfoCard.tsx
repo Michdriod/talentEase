@@ -22,13 +22,24 @@ export function ContactInfoCard() {
               <Icon size={20} />
             </div>
             <div>
-              <p className="text-sm font-semibold text-navy">{item.label}</p>
               {item.href ? (
-                <a href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined} className="text-sm text-navy/60 hover:text-green">
-                  {item.value}
-                </a>
+                item.label === item.value ? (
+                  <a href={item.href} target="_blank" rel="noopener noreferrer" className="block text-sm font-semibold text-navy hover:text-green">
+                    {item.label}
+                  </a>
+                ) : (
+                  <>
+                    <p className="text-sm font-semibold text-navy">{item.label}</p>
+                    <a href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined} className="text-sm text-navy/60 hover:text-green">
+                      {item.value}
+                    </a>
+                  </>
+                )
               ) : (
-                <p className="text-sm text-navy/60">{item.value}</p>
+                <>
+                  <p className="text-sm font-semibold text-navy">{item.label}</p>
+                  <p className="text-sm text-navy/60">{item.value}</p>
+                </>
               )}
             </div>
           </div>

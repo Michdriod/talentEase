@@ -4,23 +4,23 @@ import { useState } from "react";
 import { Suspense } from "react";
 import { ContactForm } from "@/components/ContactForm";
 import { ContactInfoCard } from "@/components/ContactInfoCard";
-import { FadeSection } from "@/components/FadeSection";
+
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
 
   return (
     <>
-      <FadeSection className="py-16 md:py-20 lg:py-28">
+      <section className="py-16 md:py-20 lg:py-28">
         <div className="mx-auto max-w-3xl px-4 text-center md:px-6 lg:px-8">
           <h1 className="text-3xl font-bold text-navy md:text-4xl lg:text-5xl">Contact Us</h1>
           <p className="mt-6 text-sm leading-relaxed text-navy/60 sm:text-base md:text-lg">
             Tell us about your HR needs, and we&apos;ll get back to you within one business day.
           </p>
         </div>
-      </FadeSection>
+      </section>
 
-      <FadeSection className="pb-20">
+      <section className="pb-20">
         <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
           {submitted ? (
             <div className="mx-auto max-w-lg rounded-2xl border border-green/20 bg-green/5 p-8 text-center md:p-12">
@@ -39,9 +39,9 @@ export default function ContactPage() {
             </div>
           )}
         </div>
-      </FadeSection>
+      </section>
 
-      <FadeSection className="pb-20">
+      <section className="pb-20">
         <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
           <div className="aspect-video overflow-hidden rounded-2xl">
             <iframe
@@ -54,7 +54,7 @@ export default function ContactPage() {
             />
           </div>
         </div>
-      </FadeSection>
+      </section>
     </>
   );
 }

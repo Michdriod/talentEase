@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Globe, Camera, Play } from "lucide-react";
 import { site } from "@/data/site";
 import { services } from "@/data/services";
 
@@ -83,24 +84,33 @@ export function Footer() {
               </li>
               <li>{site.address}</li>
               <li>{site.hours}</li>
-              <li className="flex gap-4">
+              <li className="flex gap-3">
                 <a
                   href={site.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block py-1 hover:text-green"
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white/60 transition-colors hover:border-green hover:text-green"
                   aria-label="LinkedIn"
                 >
-                  LinkedIn
+                  <Globe size={16} />
                 </a>
                 <a
                   href={site.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block py-1 hover:text-green"
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white/60 transition-colors hover:border-green hover:text-green"
                   aria-label="Instagram"
                 >
-                  Instagram
+                  <Camera size={16} />
+                </a>
+                <a
+                  href={site.youtube}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white/60 transition-colors hover:border-green hover:text-green"
+                  aria-label="YouTube"
+                >
+                  <Play size={16} />
                 </a>
               </li>
             </ul>

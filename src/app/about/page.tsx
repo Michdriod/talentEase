@@ -4,6 +4,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { TeamGrid } from "@/components/TeamGrid";
 import { CTABannerAnimated } from "@/components/CTABannerAnimated";
 import { FadeSection } from "@/components/FadeSection";
+import { StaggeredWrapper } from "@/components/StaggeredWrapper";
 import { LogoGrid } from "@/components/LogoGrid";
 import { portfolioIntro } from "@/data/clients";
 import { team } from "@/data/team";
@@ -128,17 +129,16 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
           <SectionHeading title="Who We Serve" />
           <div className="grid gap-6 md:grid-cols-3">
-            {audiences.map(({ title, icon: Icon, desc }) => (
-              <div
-                key={title}
-                className="group rounded-2xl border border-navy/10 bg-white p-6 text-center shadow-sm transition-shadow hover:shadow-md"
-              >
-                <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-green/10 text-green transition-colors group-hover:bg-green group-hover:text-white">
-                  <Icon size={22} />
+            {audiences.map(({ title, icon: Icon, desc }, i) => (
+              <StaggeredWrapper key={title} delay={i * 0.12}>
+                <div className="group rounded-2xl border border-navy/10 bg-white p-6 text-center shadow-sm transition-shadow hover:shadow-md">
+                  <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-green/10 text-green transition-colors group-hover:bg-green group-hover:text-white">
+                    <Icon size={22} />
+                  </div>
+                  <h3 className="text-lg font-bold text-navy">{title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-navy/60">{desc}</p>
                 </div>
-                <h3 className="text-lg font-bold text-navy">{title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-navy/60">{desc}</p>
-              </div>
+              </StaggeredWrapper>
             ))}
           </div>
         </div>
@@ -164,17 +164,16 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
           <SectionHeading title="Problems We Solve" />
           <div className="grid gap-6 md:grid-cols-3">
-            {problems.map(({ icon: Icon, title, desc }) => (
-              <div
-                key={title}
-                className="group rounded-2xl border border-navy/10 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
-              >
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-green/10 text-green transition-colors group-hover:bg-green group-hover:text-white">
-                  <Icon size={22} />
+            {problems.map(({ icon: Icon, title, desc }, i) => (
+              <StaggeredWrapper key={title} delay={i * 0.12}>
+                <div className="group rounded-2xl border border-navy/10 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-green/10 text-green transition-colors group-hover:bg-green group-hover:text-white">
+                    <Icon size={22} />
+                  </div>
+                  <h3 className="mb-3 text-lg font-bold text-navy">{title}</h3>
+                  <p className="text-sm leading-relaxed text-navy/60">{desc}</p>
                 </div>
-                <h3 className="mb-3 text-lg font-bold text-navy">{title}</h3>
-                <p className="text-sm leading-relaxed text-navy/60">{desc}</p>
-              </div>
+              </StaggeredWrapper>
             ))}
           </div>
         </div>

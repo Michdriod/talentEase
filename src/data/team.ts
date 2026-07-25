@@ -30,7 +30,7 @@ export const team: TeamMember[] = [
   },
   {
     name: "Marvelous Success",
-    role: "HR Associate",
+    role: "Legal/HR Associate",
     bio: "",
     photo: "/team/marvelous-success.png",
     linkedin: "https://www.linkedin.com/in/marvellous-success-a2a11b3a8/",

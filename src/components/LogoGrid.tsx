@@ -8,7 +8,7 @@ export function LogoGrid() {
         {clients.map((client) => (
           <div
             key={client.name}
-            className="relative flex h-16 w-32 items-center justify-center"
+            className="relative flex h-14 w-28 items-center justify-center"
           >
             <Image
               src={client.logo}

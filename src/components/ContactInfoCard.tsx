@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Clock, Globe } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Globe, Camera, Play } from "lucide-react";
 import { site } from "@/data/site";
 
 const contacts = [
@@ -7,7 +7,8 @@ const contacts = [
   { icon: MapPin, label: "Address", value: site.address },
   { icon: Clock, label: "Hours", value: site.hours },
   { icon: Globe, label: "LinkedIn", value: "LinkedIn", href: site.linkedin },
-  { icon: Globe, label: "Instagram", value: "Instagram", href: site.instagram },
+  { icon: Camera, label: "Instagram", value: "Instagram", href: site.instagram },
+  { icon: Play, label: "YouTube", value: "YouTube", href: site.youtube },
 ];
 
 export function ContactInfoCard() {

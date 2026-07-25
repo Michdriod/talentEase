@@ -8,6 +8,7 @@ export const site = {
   hours: "Monday – Friday: 8:00am – 5:00pm",
   linkedin: "https://www.linkedin.com/company/talentease-hr-services/",
   instagram: "https://www.instagram.com/talenteasehr",
+  youtube: "https://www.youtube.com/@TalentEaseHR",
   careersFormUrl: "#",
   web3formsKey: "5f519bf2-3fe4-4bfc-9512-d1047e21f7c6",
 } as const;

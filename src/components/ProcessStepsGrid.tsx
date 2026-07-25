@@ -4,7 +4,7 @@ import { processSteps } from "@/data/process";
 import { useInView } from "@/hooks/useInView";
 
 function StepCard({ step, delay }: { step: (typeof processSteps)[0]; delay: number }) {
-  const { ref, isInView } = useInView({ margin: "-40px", once: true });
+  const { ref, isInView } = useInView({ margin: "0px", once: true });
 
   return (
     <div
@@ -12,8 +12,9 @@ function StepCard({ step, delay }: { step: (typeof processSteps)[0]; delay: numb
       className="relative rounded-2xl border border-navy/10 bg-white p-6"
       style={{
         opacity: isInView ? 1 : 0,
-        transform: isInView ? "translateY(0)" : "translateY(20px)",
-        transition: `opacity 0.6s ease-out ${delay}s, transform 0.6s ease-out ${delay}s`,
+        transform: isInView ? "translateY(0) scale(1)" : "translateY(50px) scale(0.93)",
+        transition: `opacity 0.7s ease-out ${delay}s, transform 0.7s ease-out ${delay}s`,
+        willChange: "transform, opacity",
       }}
     >
       <span className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-green text-sm font-bold text-white">

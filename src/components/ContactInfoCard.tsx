@@ -6,9 +6,9 @@ const contacts = [
   { icon: Mail, label: "Email", value: site.email, href: `mailto:${site.email}` },
   { icon: MapPin, label: "Address", value: site.address },
   { icon: Clock, label: "Hours", value: site.hours },
-  { icon: Globe, label: "LinkedIn", value: "LinkedIn", href: site.linkedin },
-  { icon: Camera, label: "Instagram", value: "Instagram", href: site.instagram },
-  { icon: Play, label: "YouTube", value: "YouTube", href: site.youtube },
+  { icon: Globe, label: "LinkedIn", value: "TalentEase HR Services", href: site.linkedin },
+  { icon: Camera, label: "Instagram", value: "talenteasehr", href: site.instagram },
+  { icon: Play, label: "YouTube", value: "TalentEase HR", href: site.youtube },
 ];
 
 export function ContactInfoCard() {

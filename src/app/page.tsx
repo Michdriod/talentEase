@@ -67,11 +67,11 @@ export default function HomePage() {
           </div>
         </div>
         <div
-          className="absolute -right-32 top-0 h-full w-96 bg-navy opacity-5"
+          className="pointer-events-none absolute -right-32 top-0 h-full w-96 bg-navy opacity-5"
           style={{ clipPath: "polygon(30% 0, 100% 0, 100% 100%, 0% 100%)" }}
         />
         <div
-          className="absolute -left-16 bottom-0 h-64 w-64 bg-green opacity-5"
+          className="pointer-events-none absolute -left-16 bottom-0 h-64 w-64 bg-green opacity-5"
           style={{ clipPath: "polygon(0% 40%, 100% 0%, 100% 100%, 0% 60%)" }}
         />
       </FadeSection>

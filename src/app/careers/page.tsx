@@ -48,8 +48,8 @@ export default function CareersPage() {
               <p className="text-navy/60">
                 There are no open roles right now, but we&apos;re always happy to meet great talent.
                 Send your CV to{" "}
-                <a href={`mailto:${site.email}`} className="text-green hover:underline">
-                  {site.email}
+                <a href="mailto:talenntrecruit@gmail.com" className="text-green hover:underline">
+                  talenntrecruit@gmail.com
                 </a>{" "}
                 or join our talent network below.
               </p>

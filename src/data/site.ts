@@ -9,6 +9,6 @@ export const site = {
   linkedin: "https://www.linkedin.com/company/talentease-hr-services/",
   instagram: "https://www.instagram.com/talenteasehr",
   youtube: "https://www.youtube.com/@TalentEaseHR",
-  careersFormUrl: "#",
+  careersFormUrl: "https://forms.gle/u9M7Wwq72zEs8cCH9",
   web3formsKey: "5f519bf2-3fe4-4bfc-9512-d1047e21f7c6",
 } as const;

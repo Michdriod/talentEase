@@ -29,7 +29,7 @@ export const team: TeamMember[] = [
     linkedin: "https://www.linkedin.com/in/alejo-micheal",
   },
   {
-    name: "Marvelous Success",
+    name: "Marvellous Success",
     role: "Legal/HR Associate",
     bio: "",
     photo: "/team/marvelous-success.png",

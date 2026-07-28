@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Button } from "@/components/Button";
 import { JobCard } from "@/components/JobCard";
 import { FadeSection } from "@/components/FadeSection";
@@ -16,12 +17,21 @@ export default function CareersPage() {
   return (
     <>
       <FadeSection className="py-16 md:py-20 lg:py-28">
-        <div className="mx-auto max-w-3xl px-4 text-center md:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold text-navy md:text-4xl lg:text-5xl">Careers</h1>
-          <p className="mt-6 text-sm leading-relaxed text-navy/60 sm:text-base md:text-lg">
-            We connect skilled professionals with growing businesses. Browse current openings
-            below, or join our talent network to be considered for future roles.
-          </p>
+        <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
+          <div className="flex flex-col items-center gap-10 lg:flex-row lg:items-center">
+            <div className="max-w-2xl text-center lg:flex-1 lg:text-left">
+              <h1 className="text-3xl font-bold text-navy md:text-4xl lg:text-5xl">Careers</h1>
+              <p className="mt-6 text-sm leading-relaxed text-navy/60 sm:text-base md:text-lg">
+                We connect skilled professionals with growing businesses. Browse current openings
+                below, or join our talent network to be considered for future roles.
+              </p>
+            </div>
+            <div className="w-full max-w-md lg:block lg:flex-1">
+              <div className="relative mx-auto max-w-md overflow-hidden rounded-2xl bg-light" style={{ aspectRatio: "3/2" }}>
+                <Image src="/careers-hero.png" alt="Join TalentEase team" fill className="object-contain" />
+              </div>
+            </div>
+          </div>
         </div>
       </FadeSection>
 

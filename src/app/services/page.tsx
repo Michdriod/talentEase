@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ServiceDetailGrid } from "@/components/ServiceDetailGrid";
 import { ProcessStepsGrid } from "@/components/ProcessStepsGrid";
@@ -20,13 +21,22 @@ export default function ServicesPage() {
   return (
     <>
       <FadeSection className="bg-navy py-16 md:py-20 lg:py-28">
-        <div className="mx-auto max-w-3xl px-4 text-center md:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold text-white md:text-4xl lg:text-5xl">Our Premium Services</h1>
-          <p className="mt-6 text-sm leading-relaxed text-white/70 sm:text-base md:text-lg">
-            From finding the right talent to supporting employees throughout their journey, our
-            services are designed to help your business build a thriving team, while you focus
-            on growing with confidence.
-          </p>
+        <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
+          <div className="flex flex-col items-center gap-10 lg:flex-row lg:items-center">
+            <div className="max-w-2xl text-center lg:flex-1 lg:text-left">
+              <h1 className="text-3xl font-bold text-white md:text-4xl lg:text-5xl">Our Premium Services</h1>
+              <p className="mt-6 text-sm leading-relaxed text-white/70 sm:text-base md:text-lg">
+                From finding the right talent to supporting employees throughout their journey, our
+                services are designed to help your business build a thriving team, while you focus
+                on growing with confidence.
+              </p>
+            </div>
+            <div className="w-full max-w-md lg:block lg:flex-1">
+              <div className="relative flex h-64 items-center justify-center overflow-hidden rounded-2xl bg-white/10 sm:h-72 lg:h-80">
+                <Image src="/services-hero.png" alt="HR consulting services meeting" fill className="object-cover" />
+              </div>
+            </div>
+          </div>
         </div>
       </FadeSection>
 
@@ -56,7 +66,8 @@ export default function ServicesPage() {
           </div>
       </FadeSection>
 
-      <FadeSection className="bg-light py-16 md:py-20 lg:py-28">
+      <FadeSection className="bg-dot-pattern relative overflow-hidden bg-light py-16 md:py-20 lg:py-28">
+        <div className="pointer-events-none absolute -right-16 top-0 h-56 w-56 rounded-[3rem] border border-green/10" />
         <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
           <SectionHeading title="How We Work" />
           <ProcessStepsGrid />

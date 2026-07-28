@@ -53,8 +53,9 @@ export default function HomePage() {
                 </Button>
               </div>
             </div>
-            <div className="hidden flex-1 lg:block">
-              <div className="relative ml-auto h-96 w-full max-w-md overflow-hidden rounded-2xl">
+            <div className="relative w-full flex-1 lg:block">
+              <div className="relative h-64 w-full overflow-hidden rounded-2xl sm:h-72 lg:ml-auto lg:h-96 lg:max-w-md">
+                <div className="absolute inset-0 z-10 bg-gradient-to-t from-white/60 to-transparent lg:hidden" />
                 <Image
                   src="/hero.png"
                   alt="Professional workplace"
@@ -76,23 +77,31 @@ export default function HomePage() {
         />
       </FadeSection>
 
-      <FadeSection className="py-16 md:py-20 lg:py-28">
+      <FadeSection className="relative overflow-hidden py-16 md:py-20 lg:py-28">
+        <div className="pointer-events-none absolute -right-16 top-1/4 h-48 w-48 rounded-full bg-gradient-to-br from-green/[0.04] to-transparent" />
         <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <SectionHeading title="Who We Are" />
-            <p className="text-sm leading-relaxed text-navy/70 sm:text-base md:text-lg">
-              We are a people-focused HR consulting firm committed to helping businesses build
-              stronger, more efficient, and sustainable workplaces. Our team operates as an
-              extension of your leadership because we believe that every organisation thrives
-              when its people and processes work in harmony.
-            </p>
-            <div className="mt-8">
-              <Link
-                href="/about"
-                className="text-sm font-semibold text-green transition-colors hover:text-green-dark"
-              >
-                Learn more about us &rarr;
-              </Link>
+          <div className="grid items-center gap-10 lg:grid-cols-2">
+            <div className="text-center lg:text-left">
+              <SectionHeading title="Who We Are" centered={false} />
+              <p className="mx-auto max-w-xl text-sm leading-relaxed text-navy/70 sm:text-base md:text-lg lg:mx-0">
+                We are a people-focused HR consulting firm committed to helping businesses build
+                stronger, more efficient, and sustainable workplaces. Our team operates as an
+                extension of your leadership because we believe that every organisation thrives
+                when its people and processes work in harmony.
+              </p>
+              <div className="mt-8">
+                <Link
+                  href="/about"
+                  className="text-sm font-semibold text-green transition-colors hover:text-green-dark"
+                >
+                  Learn more about us &rarr;
+                </Link>
+              </div>
+            </div>
+            <div className="mx-auto w-full max-w-md">
+              <div className="relative mt-8 flex h-48 items-center justify-center overflow-hidden rounded-2xl bg-light sm:h-56 lg:h-64">
+                <Image src="/who-we-are.png" alt="TalentEase team collaborating" fill className="object-cover" />
+              </div>
             </div>
           </div>
         </div>
@@ -123,7 +132,9 @@ export default function HomePage() {
         </div>
       </FadeSection>
 
-      <FadeSection className="py-16 md:py-20 lg:py-28">
+      <FadeSection className="relative overflow-hidden py-16 md:py-20 lg:py-28">
+        <div className="pointer-events-none absolute -left-20 top-0 h-64 w-64 rounded-[3rem] border border-navy/5" />
+        <div className="pointer-events-none absolute -bottom-8 -right-8 h-40 w-40 rounded-full bg-gradient-to-br from-green/[0.04] to-transparent" />
         <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
           <SectionHeading
             title="Our Premium Services"
@@ -135,14 +146,18 @@ export default function HomePage() {
         </div>
       </FadeSection>
 
-      <FadeSection className="bg-light py-16 md:py-20 lg:py-28">
+      <FadeSection className="bg-dot-pattern relative overflow-hidden bg-light py-16 md:py-20 lg:py-28">
+        <div className="pointer-events-none absolute -left-24 top-0 h-64 w-64 rounded-[3rem] border border-green/10" />
+        <div className="pointer-events-none absolute -bottom-12 -right-12 h-40 w-40 rounded-full bg-gradient-to-br from-green/[0.04] to-transparent" />
         <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
           <SectionHeading title="How We Work With You" />
           <ProcessStepsGrid />
         </div>
       </FadeSection>
 
-      <FadeSection className="py-16 md:py-20 lg:py-28">
+      <FadeSection className="relative overflow-hidden py-16 md:py-20 lg:py-28">
+        <div className="pointer-events-none absolute -right-16 top-1/3 h-56 w-56 rounded-[2rem] border border-navy/5" />
+        <div className="pointer-events-none absolute -left-16 bottom-0 h-40 w-40 rounded-full bg-gradient-to-br from-green/[0.04] to-transparent" />
         <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
           <SectionHeading title="The TalentEase Difference" />
           <p className="mx-auto mb-12 max-w-3xl text-center text-sm leading-relaxed text-navy/60 sm:text-base md:text-lg">
@@ -154,7 +169,7 @@ export default function HomePage() {
             {differences.map(({ title, icon: Icon }) => (
               <div
                 key={title}
-                className="rounded-2xl border border-navy/10 bg-white p-6 text-center shadow-sm"
+                className="rounded-2xl border border-navy/10 bg-white p-6 text-center shadow-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-md"
               >
                 <div className="mx-auto mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-green/10 text-green">
                   <Icon size={20} />
@@ -167,7 +182,7 @@ export default function HomePage() {
       </FadeSection>
 
       {testimonials.length > 0 && (
-      <FadeSection className="bg-light py-16 md:py-20 lg:py-28">
+      <FadeSection className="bg-dot-pattern relative overflow-hidden bg-light py-16 md:py-20 lg:py-28">
           <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
             <SectionHeading title="What Our Clients Say" />
           </div>

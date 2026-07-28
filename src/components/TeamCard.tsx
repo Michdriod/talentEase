@@ -31,7 +31,7 @@ export function TeamCard({ member }: TeamCardProps) {
         href={member.linkedin}
         target="_blank"
         rel="noopener noreferrer"
-        className="group relative block rounded-2xl border border-navy/10 bg-white p-0 shadow-sm transition-shadow hover:shadow-md"
+        className="group relative block rounded-2xl border border-navy/10 bg-white p-0 shadow-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-md"
       >
         {content}
         <span className="absolute right-3 top-3 flex h-7 w-7 items-center justify-center rounded-full bg-white/90 text-navy/40 opacity-0 shadow-sm transition-opacity group-hover:opacity-100">
@@ -42,7 +42,7 @@ export function TeamCard({ member }: TeamCardProps) {
   }
 
   return (
-    <div className="rounded-2xl border border-navy/10 bg-white p-0 shadow-sm">
+    <div className="rounded-2xl border border-navy/10 bg-white p-0 shadow-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-md">
       {content}
     </div>
   );

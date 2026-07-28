@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Target, Rocket, Building2, UserX, Search, Building } from "lucide-react";
 import { SectionHeading } from "@/components/SectionHeading";
 import { TeamGrid } from "@/components/TeamGrid";
@@ -65,6 +66,9 @@ export default function AboutPage() {
                 <span className="text-green">Story</span>
               </h2>
               <div className="mt-6 h-1 w-20 rounded-full bg-gradient-to-r from-green to-green-dark" />
+              <div className="relative mt-8 flex h-48 items-center justify-center overflow-hidden rounded-2xl bg-light sm:h-56 lg:h-64">
+                <Image src="/our-story.png" alt="TalentEase team working together" fill className="object-cover" />
+              </div>
             </div>
             <div className="space-y-5 text-sm leading-relaxed text-navy/70 md:text-lg lg:col-span-3">
               <p className="border-l-4 border-green pl-5 text-lg font-medium leading-relaxed text-navy md:text-xl">
@@ -90,7 +94,7 @@ export default function AboutPage() {
         </div>
       </FadeSection>
 
-      <FadeSection className="relative overflow-hidden bg-light py-16 md:py-24 lg:py-32">
+      <FadeSection className="bg-dot-pattern relative overflow-hidden bg-light py-16 md:py-24 lg:py-32">
         <div className="pointer-events-none absolute -bottom-16 -right-16 h-72 w-72 rounded-[3rem] border border-green/10" />
         <div className="pointer-events-none absolute -bottom-8 -right-8 h-56 w-56 rounded-[2rem] border border-navy/5" />
         <div className="pointer-events-none absolute -left-20 top-1/3 h-40 w-40 -translate-y-1/2 rounded-[2rem] bg-gradient-to-br from-green/[0.03] to-transparent" />
@@ -131,7 +135,7 @@ export default function AboutPage() {
           <div className="grid gap-6 md:grid-cols-3">
             {audiences.map(({ title, icon: Icon, desc }, i) => (
               <StaggeredWrapper key={title} delay={i * 0.12}>
-                <div className="group rounded-2xl border border-navy/10 bg-white p-6 text-center shadow-sm transition-shadow hover:shadow-md">
+                <div className="group rounded-2xl border border-navy/10 bg-white p-6 text-center shadow-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-md">
                   <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-green/10 text-green transition-colors group-hover:bg-green group-hover:text-white">
                     <Icon size={22} />
                   </div>
@@ -166,7 +170,7 @@ export default function AboutPage() {
           <div className="grid gap-6 md:grid-cols-3">
             {problems.map(({ icon: Icon, title, desc }, i) => (
               <StaggeredWrapper key={title} delay={i * 0.12}>
-                <div className="group rounded-2xl border border-navy/10 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+                <div className="group rounded-2xl border border-navy/10 bg-white p-6 shadow-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-md">
                   <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-green/10 text-green transition-colors group-hover:bg-green group-hover:text-white">
                     <Icon size={22} />
                   </div>
@@ -179,7 +183,8 @@ export default function AboutPage() {
         </div>
       </FadeSection>
 
-      <FadeSection className="bg-light py-16 md:py-20 lg:py-28">
+      <FadeSection className="bg-dot-pattern relative overflow-hidden bg-light py-16 md:py-20 lg:py-28">
+        <div className="pointer-events-none absolute -left-20 top-1/4 h-48 w-48 rounded-full bg-gradient-to-br from-green/[0.04] to-transparent" />
         <div className="mx-auto max-w-7xl px-4 text-center md:px-6 lg:px-8">
           <SectionHeading title="Our Portfolio" />
           <p className="mx-auto mb-12 max-w-2xl text-base leading-relaxed text-navy/60 md:text-lg">

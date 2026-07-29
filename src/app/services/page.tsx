@@ -60,13 +60,14 @@ export default function ServicesPage() {
         </FadeSection>
       )}
 
-      <FadeSection className="py-16 md:py-20 lg:py-28">
+      <FadeSection className="bg-dot-pattern relative overflow-hidden bg-light py-16 md:py-20 lg:py-28">
+        <div className="pointer-events-none absolute -left-16 top-1/3 h-48 w-48 rounded-full bg-gradient-to-br from-green/[0.04] to-transparent" />
         <div className="mx-auto max-w-5xl space-y-6 md:space-y-8 px-4 md:px-6 lg:px-8">
             <ServiceDetailGrid services={others} />
           </div>
       </FadeSection>
 
-      <FadeSection className="bg-dot-pattern relative overflow-hidden bg-light py-16 md:py-20 lg:py-28">
+      <FadeSection className="relative overflow-hidden bg-white py-16 md:py-20 lg:py-28">
         <div className="pointer-events-none absolute -right-16 top-0 h-56 w-56 rounded-[3rem] border border-green/10" />
         <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
           <SectionHeading title="How We Work" />

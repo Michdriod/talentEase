@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Button } from "@/components/Button";
 import { JobCard } from "@/components/JobCard";
 import { FadeSection } from "@/components/FadeSection";
 import { CTABannerAnimated } from "@/components/CTABannerAnimated";
+import { PrivacyModal } from "@/components/PrivacyModal";
 import { jobs } from "@/data/jobs";
 import { site } from "@/data/site";
 
@@ -63,9 +63,7 @@ export default function CareersPage() {
               attach your CV.
             </p>
             <div className="mt-6">
-              <Button href={site.careersFormUrl} external>
-                Apply Now
-              </Button>
+              <PrivacyModal formUrl={site.careersFormUrl} />
             </div>
           </div>
         </div>

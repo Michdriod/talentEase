@@ -72,6 +72,7 @@ export const jobs: Job[] = [
     type: "Hybrid",
     location: "Victoria Island, Lagos",
     reportsTo: "Finance Manager",
+    filled: true,
     whatYouWillDo: [
       "Maintain accurate and up-to-date records of all financial transactions including income, expenses, and bank dealings",
       "Prepare and maintain accurate financial statements, including balance sheets, income statements and cash flow statements",

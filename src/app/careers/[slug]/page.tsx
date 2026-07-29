@@ -45,7 +45,11 @@ export default async function JobDetailPage({ params }: JobDetailPageProps) {
           <div className="mt-4">
             <div className="flex flex-wrap items-center gap-3">
               <h1 className="text-3xl font-bold text-navy md:text-4xl lg:text-5xl">{job.title}</h1>
-              <span className="rounded-full bg-green/10 px-3 py-1 text-xs font-semibold text-green">{job.type}</span>
+              {job.filled ? (
+                <span className="rounded-full bg-navy/10 px-3 py-1 text-xs font-semibold text-navy/50">Position Filled</span>
+              ) : (
+                <span className="rounded-full bg-green/10 px-3 py-1 text-xs font-semibold text-green">{job.type}</span>
+              )}
             </div>
             <p className="mt-3 text-sm text-navy/60">{job.location}</p>
             <p className="mt-1 text-sm text-navy/50">Reports to: {job.reportsTo}</p>
@@ -55,6 +59,13 @@ export default async function JobDetailPage({ params }: JobDetailPageProps) {
 
       <FadeSection className="pb-20">
         <div className="mx-auto max-w-3xl px-4 md:px-6 lg:px-8">
+          {job.filled && (
+            <div className="mb-6 rounded-2xl border border-navy/10 bg-navy/5 p-6 text-center">
+              <p className="text-lg font-semibold text-navy">This position has been filled.</p>
+              <p className="mt-2 text-sm text-navy/60">Check out our other open roles below.</p>
+            </div>
+          )}
+
           <div className="space-y-8 rounded-2xl border border-navy/10 bg-white p-6 shadow-sm sm:p-8">
             <div>
               <h2 className="mb-3 text-lg font-bold text-navy">What You&apos;ll Do</h2>
@@ -93,12 +104,19 @@ export default async function JobDetailPage({ params }: JobDetailPageProps) {
             </div>
 
             <div className="rounded-xl bg-light p-6 text-center">
-              <p className="text-sm text-navy/60">
-                Send your CV to{" "}
-                <a href={`mailto:${job.email}`} className="font-semibold text-green hover:underline">
-                  {job.email}
-                </a>
-              </p>
+              {job.filled ? (
+                <p className="text-sm text-navy/60">
+                  This position is no longer accepting applications. View our{" "}
+                  <a href="/careers" className="font-semibold text-green hover:underline">other open roles</a>.
+                </p>
+              ) : (
+                <p className="text-sm text-navy/60">
+                  Send your CV to{" "}
+                  <a href={`mailto:${job.email}`} className="font-semibold text-green hover:underline">
+                    {job.email}
+                  </a>
+                </p>
+              )}
             </div>
           </div>
 

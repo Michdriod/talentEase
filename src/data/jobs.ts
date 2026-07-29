@@ -9,15 +9,43 @@ export interface Job {
   whatWeOffer: string[];
   salary: string;
   email: string;
+  filled?: boolean;
 }
 
 export const jobs: Job[] = [
+  {
+    slug: "business-development-manager",
+    title: "Business Development Manager",
+    type: "Contract",
+    location: "Hybrid (3 Days Remote | 2 Days Onsite)",
+    reportsTo: "Operations Manager",
+    whatYouWillDo: [
+      "Identify and win new business opportunities",
+      "Build and manage strong client relationships",
+      "Develop and execute sales strategies",
+      "Negotiate and close business deals",
+      "Achieve revenue and growth targets",
+    ],
+    requirements: [
+      "2–5 years' experience in Business Development or Sales",
+      "Strong communication and negotiation skills",
+      "Proven ability to meet sales targets",
+      "Bachelor's degree in Business, Marketing, or a related field (preferred)",
+    ],
+    whatWeOffer: [
+      "Salary: ₦250,000/month + Performance-Based Commission",
+      "Additional percentage on revenue generated",
+    ],
+    salary: "₦250,000/month + Performance-Based Commission",
+    email: "talenntrecruit@gmail.com",
+  },
   {
     slug: "operations-manager",
     title: "Operations Manager",
     type: "Full-Time",
     location: "Alausa, Ikeja, Lagos (On-Site)",
     reportsTo: "NGO Leadership",
+    filled: true,
     whatYouWillDo: [
       "Oversee daily operations and ensure organizational efficiency",
       "Lead and manage cross-functional teams",
@@ -71,32 +99,6 @@ export const jobs: Job[] = [
       "Hybrid work arrangement",
     ],
     salary: "₦350,000/month net",
-    email: "talenntrecruit@gmail.com",
-  },
-  {
-    slug: "business-development-manager",
-    title: "Business Development Manager",
-    type: "Contract",
-    location: "Hybrid (3 Days Remote | 2 Days Onsite)",
-    reportsTo: "Operations Manager",
-    whatYouWillDo: [
-      "Identify and win new business opportunities",
-      "Build and manage strong client relationships",
-      "Develop and execute sales strategies",
-      "Negotiate and close business deals",
-      "Achieve revenue and growth targets",
-    ],
-    requirements: [
-      "2–5 years' experience in Business Development or Sales",
-      "Strong communication and negotiation skills",
-      "Proven ability to meet sales targets",
-      "Bachelor's degree in Business, Marketing, or a related field (preferred)",
-    ],
-    whatWeOffer: [
-      "Salary: ₦250,000/month + Performance-Based Commission",
-      "Additional percentage on revenue generated",
-    ],
-    salary: "₦250,000/month + Performance-Based Commission",
     email: "talenntrecruit@gmail.com",
   },
 ];

@@ -17,7 +17,7 @@ export const jobs: Job[] = [
     slug: "business-development-manager",
     title: "Business Development Manager",
     type: "Contract",
-    location: "Hybrid (3 Days Remote | 2 Days Onsite)",
+    location: "Ikeja, Lagos (Hybrid — 3 Days Remote | 2 Days Onsite)",
     reportsTo: "Operations Manager",
     whatYouWillDo: [
       "Identify and win new business opportunities",

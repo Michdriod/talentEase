@@ -57,10 +57,9 @@ export default function CareersPage() {
           )}
 
           <div className="mt-10 rounded-2xl border border-green/20 bg-green/5 p-6 text-center sm:p-8">
-            <h2 className="text-xl font-bold text-navy">Apply / Join Our Talent Network</h2>
+            <h2 className="text-xl font-bold text-navy">Join Our Talent Network</h2>
             <p className="mt-3 text-sm text-navy/60">
-              You&apos;ll be redirected to a short Google Form where you can apply for roles and
-              attach your CV.
+              You&apos;ll be redirected to a short Google Form where you can submit your attach for future job openings.
             </p>
             <div className="mt-6">
               <PrivacyModal formUrl={site.careersFormUrl} />

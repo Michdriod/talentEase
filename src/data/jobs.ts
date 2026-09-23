@@ -19,7 +19,7 @@ export const jobs: Job[] = [
     type: "Contract",
     location: "Ikeja, Lagos (Hybrid — 3 Days Remote | 2 Days Onsite)",
     reportsTo: "Operations Manager",
-    filled: false,
+    filled: true,
     whatYouWillDo: [
       "Identify and win new business opportunities",
       "Build and manage strong client relationships",
@@ -46,7 +46,7 @@ export const jobs: Job[] = [
     type: "Full-Time",
     location: "Alausa, Ikeja, Lagos (On-Site)",
     reportsTo: "NGO Leadership",
-    filled: false,
+    filled: true,
     whatYouWillDo: [
       "Oversee daily operations and ensure organizational efficiency",
       "Lead and manage cross-functional teams",

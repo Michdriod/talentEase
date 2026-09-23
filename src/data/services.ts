@@ -35,7 +35,7 @@ export const services: Service[] = [
   },
   {
     id: "learning-development",
-    title: "Learning & Development",
+    title: "Training & Development",
     short: "Training that improves performance and productivity.",
     icon: "BookOpen",
     full:

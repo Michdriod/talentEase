@@ -84,8 +84,8 @@ export default function HomePage() {
             <div className="text-center lg:text-left">
               <SectionHeading title="Who We Are" centered={false} />
               <p className="mx-auto max-w-xl text-sm leading-relaxed text-navy/70 sm:text-base md:text-lg lg:mx-0">
-                We are a people-focused HR consulting firm committed to helping businesses build
-                stronger, more efficient, and sustainable workplaces. Our team operates as an
+                We are a business-centered HR consulting firm delivering HR solutions for SMEs,
+                Startups and Growing businesses. Our team operates as an
                 extension of your leadership because we believe that every organisation thrives
                 when its people and processes work in harmony.
               </p>

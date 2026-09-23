@@ -11,7 +11,7 @@ import { services } from "@/data/services";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Explore TalentEase HR's premium services: Outsourced HR Management, Recruitment, Employee Leasing, Fractional HR, Learning & Development, and HR Strategy & Advisory.",
+    "Explore TalentEase HR's premium services: Outsourced HR Management, Recruitment, Employee Leasing, Fractional HR, Training & Development, and HR Strategy & Advisory.",
 };
 
 export default function ServicesPage() {

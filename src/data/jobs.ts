@@ -38,7 +38,7 @@ export const jobs: Job[] = [
       "Additional percentage on revenue generated",
     ],
     salary: "₦250,000/month + Performance-Based Commission",
-    email: "talenntrecruit@gmail.com",
+    email: "careers@talenteasehr.com",
   },
   {
     slug: "operations-manager",
@@ -65,7 +65,7 @@ export const jobs: Job[] = [
       "Opportunity to work with a reputable NGO",
     ],
     salary: "₦350,000/month",
-    email: "talenntrecruit@gmail.com",
+    email: "careers@talenteasehr.com",
   },
   {
     slug: "account-officer",
@@ -101,6 +101,6 @@ export const jobs: Job[] = [
       "Hybrid work arrangement",
     ],
     salary: "₦350,000/month net",
-    email: "talenntrecruit@gmail.com",
+    email: "careers@talenteasehr.com",
   },
 ];

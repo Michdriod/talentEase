@@ -95,6 +95,11 @@ export function Footer() {
                 </a>
               </li>
               <li>
+                <a href={`tel:${site.phone2}`} className="inline-block py-1 hover:text-green">
+                  {site.phone2}
+                </a>
+              </li>
+              <li>
                 <a href={`mailto:${site.email}`} className="inline-block py-1 hover:text-green">
                   {site.email}
                 </a>

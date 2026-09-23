@@ -30,6 +30,7 @@ const YouTubeIcon = ({ size = 20 }: { size?: number }) => (
 
 const contacts: ContactItem[] = [
   { icon: Phone, label: "Phone", value: site.phone, href: `tel:${site.phone}` },
+  { icon: Phone, label: "Phone", value: site.phone2, href: `tel:${site.phone2}` },
   { icon: Mail, label: "Email", value: site.email, href: `mailto:${site.email}` },
   { icon: MapPin, label: "Address", value: site.address },
   { icon: Clock, label: "Hours", value: site.hours },
@@ -44,7 +45,7 @@ export function ContactInfoCard() {
       {contacts.map((item) => {
         const Icon = item.customIcon ?? item.icon;
         return (
-          <div key={item.label} className="flex items-start gap-4">
+          <div key={`${item.label}-${item.value}`} className="flex items-start gap-4">
             <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-green/10 text-green">
               {Icon && <Icon size={20} />}
             </div>

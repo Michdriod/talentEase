@@ -2,6 +2,7 @@ export const site = {
   name: "TalentEase HR Services",
   tagline: "People. Growth. Impact.",
   phone: "+234 810 041 9997",
+  phone2: "+234 903 179 9239",
   whatsapp: "+2348100419997",
   email: "talenteasehr@gmail.com",
   address: "49 Karimu Ikotun Street, Sabo-Yaba, Lagos",

@@ -27,9 +27,13 @@ export function JobCard({ job }: JobCardProps) {
           <p className="mt-2 text-sm font-semibold text-green">{job.salary}</p>
         </div>
         {job.filled ? (
-          <span className="inline-flex items-center gap-2 rounded-lg border border-navy/10 bg-navy/5 px-5 py-2.5 text-sm font-medium text-navy/40">
+          <Link
+            href={`/careers/${job.slug}`}
+            className="inline-flex items-center gap-2 rounded-lg border border-navy/10 bg-navy/5 px-5 py-2.5 text-sm font-medium text-navy/50 transition-colors hover:bg-navy/10 hover:text-navy/70"
+          >
             Position Closed
-          </span>
+            <ArrowRight size={16} />
+          </Link>
         ) : (
           <Link
             href={`/careers/${job.slug}`}

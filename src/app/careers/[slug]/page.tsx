@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
-import { jobs } from "@/data/jobs";
+import { jobs, type Job } from "@/data/jobs";
+import { site } from "@/data/site";
 import { Button } from "@/components/Button";
 import { FadeSection } from "@/components/FadeSection";
 import { notFound } from "next/navigation";
@@ -24,6 +25,61 @@ export function generateStaticParams() {
   return jobs.map((job) => ({ slug: job.slug }));
 }
 
+const employmentTypes: Record<string, string> = {
+  "Full-Time": "FULL_TIME",
+  "Part-Time": "PART_TIME",
+  Contract: "CONTRACTOR",
+  Internship: "INTERN",
+};
+
+// Google for Jobs listing. Only open jobs with a datePosted get one, so marking a job
+// as filled removes it from Google Jobs.
+function jobPostingJsonLd(job: Job) {
+  const list = (items: string[]) => `<ul>${items.map((i) => `<li>${i}</li>`).join("")}</ul>`;
+  const salary = job.salary.match(/₦([\d,]+)\/month/);
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "JobPosting",
+    title: job.title,
+    description:
+      `<p>${job.title} (${job.location}). Reports to: ${job.reportsTo}.</p>` +
+      `<h3>What You'll Do</h3>${list(job.whatYouWillDo)}` +
+      `<h3>Requirements</h3>${list(job.requirements)}` +
+      `<h3>What We Offer</h3>${list(job.whatWeOffer)}` +
+      `<p>Send your CV to ${job.email}</p>`,
+    identifier: { "@type": "PropertyValue", name: site.name, value: job.slug },
+    datePosted: job.datePosted,
+    employmentType: employmentTypes[job.type],
+    hiringOrganization: {
+      "@type": "Organization",
+      name: site.name,
+      sameAs: "https://talenteasehr.com",
+      logo: "https://talenteasehr.com/logo.png",
+    },
+    jobLocation: {
+      "@type": "Place",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: job.location.split(/[,(]/)[0].trim(),
+        addressRegion: "Lagos",
+        addressCountry: "NG",
+      },
+    },
+    ...(salary && {
+      baseSalary: {
+        "@type": "MonetaryAmount",
+        currency: "NGN",
+        value: {
+          "@type": "QuantitativeValue",
+          value: Number(salary[1].replace(/,/g, "")),
+          unitText: "MONTH",
+        },
+      },
+    }),
+  };
+}
+
 export default async function JobDetailPage({ params }: JobDetailPageProps) {
   const { slug } = await params;
   const job = jobs.find((j) => j.slug === slug);
@@ -32,6 +88,14 @@ export default async function JobDetailPage({ params }: JobDetailPageProps) {
 
   return (
     <>
+      {!job.filled && job.datePosted && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jobPostingJsonLd(job)).replace(/</g, "\\u003c"),
+          }}
+        />
+      )}
       <FadeSection className="py-16 md:py-20 lg:py-28">
         <div className="mx-auto max-w-3xl px-4 md:px-6 lg:px-8">
           <Link

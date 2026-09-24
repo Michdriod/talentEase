@@ -9,6 +9,8 @@ export interface Job {
   whatWeOffer: string[];
   salary: string;
   email: string;
+  /** Date the job was posted (YYYY-MM-DD). Needed for the job to appear in Google Jobs. */
+  datePosted?: string;
   filled?: boolean;
 }
 
@@ -19,6 +21,7 @@ export const jobs: Job[] = [
     type: "Contract",
     location: "Ikeja, Lagos (Hybrid — 3 Days Remote | 2 Days Onsite)",
     reportsTo: "Operations Manager",
+    datePosted: "2026-09-24",
     filled: true,
     whatYouWillDo: [
       "Identify and win new business opportunities",

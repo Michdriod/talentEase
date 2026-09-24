@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { site } from "@/data/site";
 
 const poppins = Poppins({
   variable: "--font-heading",
@@ -33,6 +34,38 @@ export const metadata: Metadata = {
   },
 };
 
+const siteUrl = "https://talenteasehr.com";
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": `${siteUrl}/#organization`,
+  name: site.name,
+  alternateName: ["TalentEase HR", "TalentEase"],
+  url: siteUrl,
+  logo: `${siteUrl}/logo.png`,
+  image: `${siteUrl}/logo.png`,
+  description:
+    "A business-centered HR consulting firm delivering HR solutions for SMEs, startups and growing businesses in Lagos, Nigeria.",
+  email: site.email,
+  telephone: [site.phone, site.phone2],
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "49 Karimu Ikotun Street, Sabo-Yaba",
+    addressLocality: "Lagos",
+    addressRegion: "Lagos",
+    addressCountry: "NG",
+  },
+  areaServed: { "@type": "Country", name: "Nigeria" },
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    opens: "08:00",
+    closes: "17:00",
+  },
+  sameAs: [site.linkedin, site.instagram, site.youtube],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -45,6 +78,12 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <WhatsAppButton />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd).replace(/</g, "\\u003c"),
+          }}
+        />
       </body>
     </html>
   );

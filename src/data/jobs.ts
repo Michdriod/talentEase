@@ -22,7 +22,6 @@ export const jobs: Job[] = [
     location: "Ikeja, Lagos (Hybrid — 3 Days Remote | 2 Days Onsite)",
     reportsTo: "Operations Manager",
     datePosted: "2026-09-24",
-    filled: true,
     whatYouWillDo: [
       "Identify and win new business opportunities",
       "Build and manage strong client relationships",
